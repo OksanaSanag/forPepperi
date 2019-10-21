@@ -15,7 +15,7 @@ body {
 form {
     width: 500px;
     padding: 50px;
-    background: rgb(250, 249, 250);
+    background: rgb(247, 245, 250);
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -30,24 +30,30 @@ span {
 .inputPair {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
-input{
-    display: flex;
+input, .formOutput {
     width: 350px;
+    border: 1px solid rgb(189, 187, 187);
+    padding: 3px;
+    border-radius: 5px;
+}
+.formOutput {
+    height: 250px;
 }
 
 button {
     display: flex;
-    align-self: center;
     justify-content: center;    
     font-size: 12px;
     font-weight: 600;
-    border-radius: 5px;
-    margin-left: 40px;  
-    
+    border-radius: 5px;    
+    width: 100px;
+    background: rgb(237, 240, 250);
+    padding: 3px;
+    border-color: rgb(216, 219, 250);
 }
 
 .second {
@@ -62,12 +68,7 @@ button {
 .formOutputButtons {
     display: flex;
     flex-direction: row;
-}
-
-.formOutput {
-    width: 350px;
-    height: 250px;
-    border: 1px solid rgb(189, 187, 187);
+    justify-content: space-between;
 }
 
 .divOnePair {
@@ -81,4 +82,29 @@ p {
 }
 .checkBox {
     width: 15px;
+}
+
+
+@media (max-width: 600px) {
+
+    form {
+        width: 250px;
+        padding: 0 50px;
+    }
+    
+    .inputPair, .formOutputButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    input, .formOutput{
+        display: flex;
+        width: 250px;
+        padding: 0 5px;
+    }
 }
